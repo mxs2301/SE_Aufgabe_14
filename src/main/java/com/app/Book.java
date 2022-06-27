@@ -6,6 +6,15 @@ public class Book {
 	private String author;
 	private int isbn;
 	private String publication;
+	private boolean borrowed = false;
+
+
+	public Book(String title, String author, int isbn, String publication){
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+		this.publication = publication;
+	}
 
 	public void Show_duedate() {
 		// TODO - implement Book.Show_duedate
@@ -30,6 +39,22 @@ public class Book {
 	public void Renew_info() {
 		// TODO - implement Book.Renew_info
 		throw new UnsupportedOperationException();
+	}
+
+	public String getName(){
+		return title;
+	}
+
+	public void switchBorrowed(){
+		if(borrowed == false){
+			borrowed = true;
+		}else{
+			borrowed = false;
+		}
+	}
+
+	public boolean getBorrowed(){
+		return borrowed;
 	}
 
 }

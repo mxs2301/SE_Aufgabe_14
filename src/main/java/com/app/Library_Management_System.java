@@ -14,10 +14,10 @@ public class Library_Management_System {
 	//private String username;
 	//private String password;
 
-	public Library_Management_System(){
+	public Library_Management_System(String input){
 		data = new HashMap<>();
 		order = new HashMap<>();
-		DataBase = new Library_database();
+		DataBase = new Library_database(input);
 	}
 
 

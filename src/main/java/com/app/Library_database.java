@@ -6,14 +6,22 @@ import java.util.HashMap;
 
 public class Library_database {
 	private ArrayList<Book> list_of_books;
-	
+	private String DBName = null;
 
-	public Library_database(){
+	public Library_database(String input){
 		list_of_books = new ArrayList<>();
+		String name = input+".txt";
+		Sql.create(name);
+		String insert = "create table "+input+"(BookID int;";
+		Sql.write(insert, name);
+		DBName = input;
 	}
 
 	public void Add(Book e) {
 		list_of_books.add(e);
+		Sql.create("Befehl.txt");
+		String insert = "INSERT INTO " + DBName + "(BookID) VALUES("+e.getISBN()+");";
+		Sql.write(insert, "Befehl.txt");
 	}
 
 	public void Delete(Book e) {

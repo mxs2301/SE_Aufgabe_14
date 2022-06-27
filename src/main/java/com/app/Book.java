@@ -57,4 +57,8 @@ public class Book {
 		return borrowed;
 	}
 
+	public int getISBN(){
+		return isbn;
+	}
+
 }

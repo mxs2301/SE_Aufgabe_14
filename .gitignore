@@ -9,3 +9,5 @@ gradlew.bat
 build
 bin
 .settings
+.project
+.classpath

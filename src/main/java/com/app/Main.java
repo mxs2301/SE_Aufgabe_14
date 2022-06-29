@@ -16,7 +16,7 @@ public class Main {
 		HFU.DataBase.Add(B_eins);
 		HFU.DataBase.Add(B_zwei);
 		HFU.DataBase.Add(B_drei);
-		System.out.println("Bitte legen Sie einen User an: ");
+		System.out.print("Bitte legen Sie einen User an: ");
 		String doub = sc.nextLine();
 		Integer num = 0;
 		int stuff;
@@ -28,9 +28,11 @@ public class Main {
 			System.out.print("Geben Sie ein Passwort ein: ");
 			String line = sc.nextLine();
 			HFU.Register("User"+line, line, "Student");
+			sc.close();
+			Scanner scan = new Scanner(System.in);
 			System.out.println("Nutzer wurde erfolgreich erstellt");
 			System.out.println("Suchen Sie aus ob Sie Buch 1, 2 oder 3 ausleihen wollen.");
-			num = sc.nextInt();
+			num = scan.nextInt();
 			switch(num){
 			case 1:
 				A.Ausleihen(B_eins);
@@ -48,11 +50,13 @@ public class Main {
 
 			A.Ausgeliehenes();
 
+			scan.close();
+
 		}else{
 			System.out.println("Auf wiedersehen!");
 		}
 
-
+		sc.close();
 
 	}
 }

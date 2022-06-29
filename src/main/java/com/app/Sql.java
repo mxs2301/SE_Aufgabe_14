@@ -10,9 +10,9 @@ public class Sql {
 		try{
 		File myObj = new File("/home/max/Documents/Git/SE_Aufgabe_14/TXT/" + input);
 		if(myObj.createNewFile()){
-			System.out.println("Datenbank: " + myObj.getName()+ "wurde erstellt");
+			System.out.println("...");
 		}else{
-			System.out.println("Datenbank "+myObj.getName()+ " wurde bereits erstellt");
+			System.out.println("...");
 		}
 	} catch(IOException e){
 		System.out.println("Fehler, irgendetwas ging schief");
